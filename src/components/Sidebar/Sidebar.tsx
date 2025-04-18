@@ -3,7 +3,7 @@ import type { SidebarProps } from "./Sidebar.types";
 import { ChevronLeft, ChevronRight, Moon, Sun } from "lucide-react";
 import { useTheme } from "../ThemeProvider"; // adjust this import path if needed
 
-export const Sidebar = ({ items, expanded = true }: SidebarProps) => {
+export const Sidebar = ({ items, expanded = false }: SidebarProps) => {
   const [isExpanded, setIsExpanded] = useState(expanded);
   const { theme, toggleTheme } = useTheme();
 
@@ -12,7 +12,7 @@ export const Sidebar = ({ items, expanded = true }: SidebarProps) => {
       className={`h-screen flex flex-col justify-between transition-all duration-300
         ${isExpanded ? "w-64" : "w-16"} 
         bg-white text-black dark:bg-gray-900 dark:text-white
-        sm:w-20 lg:w-64`} // sm:w-20 sets a smaller width for small screens, lg:w-64 for larger screens
+        w-20 lg:w-64`} // sm:w-20 sets a smaller width for small screens, lg:w-64 for larger screens
     >
       {/* Top Section */}
       <div className="flex-1">
@@ -22,7 +22,7 @@ export const Sidebar = ({ items, expanded = true }: SidebarProps) => {
           </h2>
           <button
             onClick={() => setIsExpanded((prev) => !prev)}
-            className="focus:outline-none text-gray-700 dark:text-gray-300"
+            className="focus:outline-none hidden md:flex text-gray-700 dark:text-gray-300"
           >
             {isExpanded ? <ChevronLeft size={20} /> : <ChevronRight size={20} />}
           </button>

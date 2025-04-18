@@ -1,9 +1,10 @@
-import type { Meta, StoryObj } from "@storybook/react"
-import { Sidebar } from "./Sidebar"
-import { Home, Settings, Users } from "lucide-react"
+import type { Meta, StoryObj } from "@storybook/react";
+import { Sidebar } from "./Sidebar";
+import { Home, Settings, Users } from "lucide-react";
 
-const meta: Meta<typeof Sidebar> = {
-  title: "Components/Sidebar",
+// Default export metadata
+const meta = {
+  title: "Example/Sidebar",
   component: Sidebar,
   tags: ["autodocs"],
   parameters: {
@@ -12,18 +13,20 @@ const meta: Meta<typeof Sidebar> = {
       defaultViewport: "responsive",
     },
   },
-}
+} satisfies Meta<typeof Sidebar>;
 
-export default meta
-type Story = StoryObj<typeof Sidebar>
+export default meta;
+type Story = StoryObj<typeof meta>;
 
+// Sidebar items used in all stories
 const sidebarItems = [
   { label: "Home", href: "#", icon: <Home /> },
   { label: "Users", href: "#", icon: <Users /> },
   { label: "Settings", href: "#", icon: <Settings /> },
-]
+];
 
-export const Default: Story = {
+// Expanded Sidebar (Desktop)
+export const Expanded: Story = {
   name: "Expanded - Desktop",
   args: {
     items: sidebarItems,
@@ -32,8 +35,9 @@ export const Default: Story = {
   parameters: {
     viewport: { defaultViewport: "desktop" },
   },
-}
+};
 
+// Collapsed Sidebar (Desktop)
 export const Collapsed: Story = {
   name: "Collapsed - Desktop",
   args: {
@@ -43,10 +47,11 @@ export const Collapsed: Story = {
   parameters: {
     viewport: { defaultViewport: "desktop" },
   },
-}
+};
 
+// Sidebar on Mobile
 export const Mobile: Story = {
-  name: "Sidebar - Mobile View",
+  name: "Mobile View",
   args: {
     items: sidebarItems,
     expanded: false,
@@ -54,10 +59,11 @@ export const Mobile: Story = {
   parameters: {
     viewport: { defaultViewport: "iphone12" },
   },
-}
+};
 
+// Sidebar on Tablet
 export const Tablet: Story = {
-  name: "Sidebar - Tablet View",
+  name: "Tablet View",
   args: {
     items: sidebarItems,
     expanded: true,
@@ -65,4 +71,4 @@ export const Tablet: Story = {
   parameters: {
     viewport: { defaultViewport: "ipad" },
   },
-}
+};
