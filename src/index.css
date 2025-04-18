@@ -1,0 +1,97 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+:root {
+    /* Primary Colors */
+    --color-primary: #6556cd;
+    --color-primary-hover: #574bb5;
+    --color-primary-disabled: #a89ff1;
+  
+    /* Secondary & Tertiary */
+    --color-secondary: #1e90ff;
+    --color-tertiary: #00bcd4;
+  
+    /* Semantic */
+    --color-success: #22c55e;
+    --color-info: #3b82f6;
+    --color-warning: #facc15;
+    --color-error: #ef4444;
+  
+    /* Neutrals */
+    --color-white: #ffffff;
+    --color-black: #000000;
+    --color-gray-100: #f3f4f6;
+    --color-gray-300: #d1d5db;
+    --color-gray-500: #6b7280;
+    --color-gray-700: #374151;
+    --color-gray-900: #111827;
+  
+    /* Backgrounds */
+    --color-bg-surface: #ffffff;
+    --color-bg-muted: #f9fafb;
+  }
+  
+  [data-theme="dark"] {
+    --color-primary: #6556cd;
+    --color-primary-hover: #8b7ef2;
+    --color-primary-disabled: #a89ff1;
+  
+    --color-secondary: #60a5fa;
+    --color-tertiary: #67e8f9;
+  
+    --color-success: #4ade80;
+    --color-info: #60a5fa;
+    --color-warning: #fde047;
+    --color-error: #f87171;
+  
+    --color-white: #000000;
+    --color-black: #ffffff;
+    --color-gray-100: #1f2937;
+    --color-gray-300: #374151;
+    --color-gray-500: #6b7280;
+    --color-gray-700: #9ca3af;
+    --color-gray-900: #f3f4f6;
+  
+    --color-bg-surface: #1f1e24;
+    --color-bg-muted: #111827;
+  }
+  
+  :root {
+  --color-primary: #6556cd;
+  --color-secondary: #6b7280;
+  --color-tertiary: #a78bfa;
+  --color-success: #10b981;
+  --color-info: #3b82f6;
+  --color-warning: #facc15;
+  --color-error: #ef4444;
+
+  --color-gray-100: #f3f4f6;
+  --color-gray-300: #d1d5db;
+  --color-gray-500: #6b7280;
+  --color-gray-700: #374151;
+  --color-gray-900: #111827;
+
+  --color-bg-surface: #ffffff;
+  --color-bg-muted: #f9fafb;
+}
+
+.dark {
+  --color-primary: #8b5cf6;
+  --color-secondary: #94a3b8;
+  --color-tertiary: #c084fc;
+  --color-success: #22c55e;
+  --color-info: #60a5fa;
+  --color-warning: #fcd34d;
+  --color-error: #f87171;
+
+  --color-gray-100: #1f2937;
+  --color-gray-300: #374151;
+  --color-gray-500: #6b7280;
+  --color-gray-700: #9ca3af;
+  --color-gray-900: #f9fafb;
+
+  --color-bg-surface: #1f1e24;
+  --color-bg-muted: #2c2b30;
+}
